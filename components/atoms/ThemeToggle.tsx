@@ -3,7 +3,7 @@
 import * as React from "react";
 
 import { Text } from "@/components/atoms/text";
-import { Switch } from "@/components/atoms/Switch";
+import { Switch } from "@/components/atoms/switch";
 
 const STORAGE_KEY = "theme";
 
