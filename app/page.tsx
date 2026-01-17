@@ -1,4 +1,4 @@
-import { Box } from "@/components/atoms/Box";
+import { Box } from "@/components/atoms/box";
 import { Button } from "@/components/atoms/Button";
 import { Input } from "@/components/atoms/Input";
 import { Text } from "@/components/atoms/Text";
