@@ -2,7 +2,8 @@
 
 import * as React from "react";
 
-import { Button } from "@/components/ui/button";
+import { Switch } from "@/components/ui/switch";
+import { Text } from "@/components/atoms/Text";
 
 const STORAGE_KEY = "theme";
 
@@ -17,24 +18,22 @@ export function ThemeToggle() {
     document.documentElement.classList.toggle("dark", next);
   }, []);
 
-  const handleToggle = () => {
-    const next = !isDark;
-
+  const handleCheckedChange = (next: boolean) => {
     setIsDark(next);
     document.documentElement.classList.toggle("dark", next);
     sessionStorage.setItem(STORAGE_KEY, next ? "dark" : "light");
   };
 
   return (
-    <Button
-      type="button"
-      variant="outline"
-      size="sm"
-      onClick={handleToggle}
-      aria-pressed={isDark}
-      className="fixed right-4 top-4 z-50"
-    >
-      {isDark ? "Switch to light" : "Switch to dark"}
-    </Button>
+    <div className="fixed right-4 top-4 z-50 flex items-center gap-2 rounded-full border border-border bg-background/90 px-3 py-2 shadow-sm">
+      <Text as="span" variant="muted">
+        Dark mode
+      </Text>
+      <Switch
+        checked={isDark}
+        onCheckedChange={handleCheckedChange}
+        aria-label="Toggle dark mode"
+      />
+    </div>
   );
 }
