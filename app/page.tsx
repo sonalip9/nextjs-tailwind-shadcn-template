@@ -1,7 +1,7 @@
 import { Box } from "@/components/atoms/Box";
+import { Button } from "@/components/atoms/Button";
+import { Input } from "@/components/atoms/Input";
 import { Text } from "@/components/atoms/Text";
-import { Button } from "@/components/ui/button";
-import { Input } from "@/components/ui/input";
 
 export default function Home() {
   return (

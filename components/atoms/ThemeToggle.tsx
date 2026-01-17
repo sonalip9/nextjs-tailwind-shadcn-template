@@ -2,8 +2,8 @@
 
 import * as React from "react";
 
-import { Switch } from "@/components/ui/switch";
 import { Text } from "@/components/atoms/Text";
+import { Switch } from "@/components/atoms/Switch";
 
 const STORAGE_KEY = "theme";
 
