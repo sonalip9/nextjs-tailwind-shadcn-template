@@ -105,6 +105,7 @@ Rules:
 - Keep components focused on a single responsibility
 - Extract reusable logic into hooks
 - Avoid deeply nested JSX
+- Every component in components/ui must have an equivalent component in components/atoms, components/molecules, or components/template
 
 ## File & Folder Conventions
 
