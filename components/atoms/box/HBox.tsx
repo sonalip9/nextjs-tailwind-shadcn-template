@@ -1,14 +1,10 @@
-import * as React from "react";
-
 import { cn } from "@/lib/utils";
 
-import { Box, type BoxProps } from "./Box";
+import { type BoxProps } from "./Box";
+import { Box } from "./Box";
 
-export type HBoxProps<T extends React.ElementType = "div"> = BoxProps<T>;
+export type HBoxProps = BoxProps;
 
-export function HBox<T extends React.ElementType = "div">({
-  className,
-  ...props
-}: HBoxProps<T>) {
+export function HBox({ className, ...props }: HBoxProps) {
   return <Box className={cn("flex flex-row", className)} {...props} />;
 }
