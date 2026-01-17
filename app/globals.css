@@ -41,6 +41,16 @@
 }
 
 @theme inline {
+  /* Spacing */
+  --spacing-xs: calc(var(--spacing) * 2); /* 0.5rem or p-2 */
+  --spacing-sm: calc(var(--spacing) * 4); /* 1rem or p-4 */
+  --spacing-md: calc(var(--spacing) * 6); /* 1.5rem or p-6 */
+  --spacing-lg: calc(var(--spacing) * 8); /* 2rem or p-8 */
+  --spacing-xl: calc(var(--spacing) * 10); /* 2.5rem or p-10 */
+  --spacing-2xl: calc(var(--spacing) * 12); /* 3rem or p-12 */
+  --spacing-3xl: calc(var(--spacing) * 16); /* 4rem or p-16 */
+
+  /* Colors */
   --color-background: var(--background);
   --color-foreground: var(--foreground);
   --color-sidebar-ring: var(--sidebar-ring);
@@ -72,6 +82,8 @@
   --color-popover: var(--popover);
   --color-card-foreground: var(--card-foreground);
   --color-card: var(--card);
+
+  /* Border Radius */
   --radius-sm: calc(var(--radius) - 4px);
   --radius-md: calc(var(--radius) - 2px);
   --radius-lg: var(--radius);
@@ -83,6 +95,7 @@
 
 :root {
   --radius: 0.625rem;
+
   --background: oklch(1 0 0);
   --foreground: oklch(0.145 0 0);
   --card: oklch(1 0 0);
