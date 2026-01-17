@@ -5,9 +5,9 @@ import { Text } from "@/components/atoms/text";
 
 export default function Home() {
   return (
-    <Box className="min-h-screen bg-background px-6 py-16 text-foreground">
-      <Box className="mx-auto flex w-full max-w-3xl flex-col gap-10 rounded-3xl border border-border bg-card p-8 shadow-sm">
-        <Box className="flex flex-col gap-3">
+    <Box className="min-h-screen bg-background px-md py-3xl text-foreground">
+      <Box className="mx-auto flex w-full max-w-3xl flex-col gap-xl rounded-3xl border border-border bg-card p-lg shadow-sm">
+        <Box className="flex flex-col gap-sm">
           <Text as="h1" variant="h1">
             Theme-ready starter
           </Text>
@@ -16,7 +16,7 @@ export default function Home() {
             top of shadcn/ui primitives.
           </Text>
         </Box>
-        <Box className="flex flex-col gap-3">
+        <Box className="flex flex-col gap-sm">
           <Text
             as="label"
             className="text-foreground"
@@ -30,7 +30,7 @@ export default function Home() {
             We only store drafts in your browser for this session.
           </Text>
         </Box>
-        <Box className="flex flex-wrap items-center gap-3">
+        <Box className="flex flex-wrap items-center gap-sm">
           <Button>Primary action</Button>
           <Button variant="outline">Secondary action</Button>
         </Box>
