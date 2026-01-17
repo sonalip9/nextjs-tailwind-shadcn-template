@@ -1,5 +1,5 @@
 import { Box } from "@/components/atoms/box";
-import { Button } from "@/components/atoms/Button";
+import { Button } from "@/components/atoms/button";
 import { Input } from "@/components/atoms/Input";
 import { Text } from "@/components/atoms/text";
 
