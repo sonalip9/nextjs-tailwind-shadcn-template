@@ -54,7 +54,7 @@ You can start building immediately without spending an afternoon setting things 
 │   └── copilot-instructions.md
 ├── tailwind.config.ts
 ├── tsconfig.json
-└── next.config.js
+└── next.config.ts
 ````
 
 ---
