@@ -55,7 +55,7 @@ You can start building immediately without spending an afternoon setting things 
 ├── tailwind.config.ts
 ├── tsconfig.json
 └── next.config.ts
-````
+```
 
 ---
 
