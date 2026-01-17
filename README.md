@@ -46,7 +46,17 @@ You can start building immediately without spending an afternoon setting things 
 │   ├── page.tsx
 │   └── globals.css
 ├── components/
-│   └── ui/            # shadcn components
+│   ├── atoms/
+│   │   ├── box/        # Box, HBox, VBox
+│   │   ├── button/
+│   │   ├── input/
+│   │   ├── switch/
+│   │   ├── text/
+│   │   └── index.ts
+│   ├── molecules/
+│   │   └── theme-toggle/
+│   ├── organisms/
+│   └── ui/            # shadcn components only
 ├── lib/
 │   └── utils.ts       # shared utilities (cn, helpers)
 ├── public/
@@ -91,6 +101,20 @@ npx shadcn@latest add button
 - Minimal custom CSS
 - Design consistency via utility classes
 - Components stay flexible and composable
+
+## Design Tokens
+
+- Tokens live in `app/globals.css` as CSS variables
+- Tailwind maps colors, spacing, typography, and radius to tokens
+- Use semantic utilities like `text-h1`, `p-md`, `gap-sm`
+- Dark mode swaps token values via the `.dark` class
+
+## Atomic Structure
+
+- Atoms: layout primitives (Box/HBox/VBox), text, buttons, thin shadcn wrappers
+- Molecules: small composed UI blocks with intent
+- Organisms: page-level sections or forms
+- `components/ui` is for shadcn/ui components only
 
 ---
 
