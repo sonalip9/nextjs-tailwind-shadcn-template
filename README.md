@@ -118,6 +118,48 @@ npx shadcn@latest add button
 
 ---
 
+## Developer Experience
+
+This template includes conservative, stable DevX tooling:
+
+### Git Hooks (Husky)
+
+- **Pre-commit**: Runs ESLint, Prettier, and fast typecheck on staged files
+- **Commit-msg**: Enforces Conventional Commits (feat/fix/chore/docs/refactor/test)
+- **Pre-push**: Runs full typecheck and test suite
+
+### Scripts
+
+```bash
+pnpm dev         # Start dev server
+pnpm build       # Build for production
+pnpm lint        # Run ESLint
+pnpm format      # Format with Prettier
+pnpm typecheck   # Run TypeScript typecheck
+pnpm test        # Run test suite
+pnpm test:watch  # Run tests in watch mode
+pnpm analyze     # Build with bundle analyzer
+```
+
+### CI/CD
+
+- GitHub Actions workflow runs on PRs and pushes to `main`
+- Tests lint, typecheck, tests, and build
+- Dependabot keeps dependencies up to date (weekly, grouped updates)
+
+### Bypassing Hooks
+
+If you need to bypass hooks temporarily:
+
+```bash
+git commit --no-verify -m "message"
+git push --no-verify
+```
+
+Use sparingly. Hooks exist to catch issues early.
+
+---
+
 ## Deployment
 
 This template works out of the box with:
