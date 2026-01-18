@@ -5,7 +5,7 @@ import { cn } from "@/lib/utils";
 const HeaderVariants = ["h1", "h2", "h3", "h4"] as const;
 type HeaderVariant = (typeof HeaderVariants)[number];
 
-type TextVariant = HeaderVariant | "body" | "caption" | "footer";
+export type TextVariant = HeaderVariant | "body" | "caption" | "footer";
 
 const textVariants: Record<TextVariant, string> = {
   h1: "text-h1 font-header",
@@ -17,7 +17,7 @@ const textVariants: Record<TextVariant, string> = {
   footer: "text-footer font-body",
 };
 
-type TextProps<T extends React.ElementType = "p"> = {
+export type TextProps<T extends React.ElementType = "p"> = {
   as?: T;
   variant?: TextVariant;
   className?: string;
