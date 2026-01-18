@@ -117,8 +117,8 @@ Rules:
 
 ## File & Folder Conventions
 
-- Atomic component folders use `kebab-case` with lowercase files (e.g. `box/box.tsx`)
-- Higher-level components may use `PascalCase.tsx` when appropriate
+- All component files should follow `PascalCase`.
+- The folder structure should follow `kebab-case`.
 - Hooks: `useSomething.ts`
 - Utilities: `kebab-case.ts`
 - Keep related files close together
