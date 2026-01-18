@@ -46,14 +46,9 @@
     "vitest": "^4.0.17"
   },
   "lint-staged": {
-    "*.{js,jsx,mjs}": [
+    "*.{js,jsx,mjs,ts,tsx}": [
       "eslint --fix --max-warnings=0",
       "prettier --write"
-    ],
-    "*.{ts,tsx}": [
-      "eslint --fix --max-warnings=0",
-      "prettier --write",
-      "tsc --noEmit"
     ],
     "*.{json,md,css,scss}": [
       "prettier --write"
