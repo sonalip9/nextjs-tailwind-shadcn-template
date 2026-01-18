@@ -1,2 +1,1 @@
-pnpm exec tsc --noEmit
-pnpm test
+pnpm typecheck --noEmit && pnpm test
