@@ -1,11 +1,17 @@
 # GitHub Copilot Instructions
 
-You are assisting in a **production-grade Next.js project** using:
+You are assisting in a **production-grade Next.js template** using:
 
 - Next.js (App Router)
 - TypeScript
 - Tailwind CSS
-- shadcn/ui (BaseUI-based components)
+- shadcn/ui (Radix-based components)
+
+This is a **template repository**, not a product. All tooling and conventions must be:
+
+- Conservative and stable
+- Easy to opt out of
+- Non-surprising to new users
 
 Your goal is to generate **clean, maintainable, idiomatic code** that aligns with the conventions below and apply changes incrementally.
 
@@ -20,6 +26,19 @@ Your goal is to generate **clean, maintainable, idiomatic code** that aligns wit
 - `README.md` contains setup and architectural decisions
 - Do not introduce features, tools, or patterns not justified by the README
 - If something is unclear, choose the simplest reasonable default
+
+## Developer Experience
+
+This template includes:
+
+- **Pre-commit hooks** (ESLint, Prettier, typecheck on staged files)
+- **Commit-msg validation** (Conventional Commits enforced)
+- **Pre-push hooks** (full typecheck + tests)
+- **GitHub Actions CI** (lint, typecheck, test, build)
+- **Dependabot** (weekly grouped updates, major versions ignored)
+- **Bundle analyzer** (opt-in via `pnpm analyze`)
+
+All DevX tooling is designed to be stable and non-intrusive.
 
 ## Mandatory Git Workflow
 
