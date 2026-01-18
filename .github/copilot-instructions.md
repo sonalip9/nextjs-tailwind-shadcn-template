@@ -90,6 +90,8 @@ Rules:
 - Avoid custom CSS unless unavoidable
 - Group classes logically
 - Use `cn()` for conditional class composition
+- Use design token utilities for spacing, typography, color, and radius
+- No hardcoded spacing values in components
 
 ### shadcn/ui
 
@@ -105,11 +107,18 @@ Rules:
 - Keep components focused on a single responsibility
 - Extract reusable logic into hooks
 - Avoid deeply nested JSX
-- Every component in components/ui must have an equivalent component in components/atoms, components/molecules, or components/template
+- Enforce atomic design structure:
+  - atoms: layout primitives (Box/HBox/VBox), text, buttons, thin shadcn wrappers
+  - molecules: small compositions with intent
+  - organisms: page-level sections or forms
+- Layout primitives are always atoms (layout ≠ intent)
+- components/ui contains only shadcn/ui components
+- Every component in components/ui must have a wrapper in atoms/molecules/organisms when used
 
 ## File & Folder Conventions
 
-- Components: `PascalCase.tsx`
+- All component files should follow `PascalCase`.
+- The folder structure should follow `kebab-case`.
 - Hooks: `useSomething.ts`
 - Utilities: `kebab-case.ts`
 - Keep related files close together

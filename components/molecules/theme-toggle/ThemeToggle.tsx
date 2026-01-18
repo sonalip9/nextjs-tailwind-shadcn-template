@@ -2,8 +2,8 @@
 
 import * as React from "react";
 
-import { Text } from "@/components/atoms/Text";
-import { Switch } from "@/components/atoms/Switch";
+import { Switch } from "@/components/atoms/switch";
+import { Text } from "@/components/atoms/text";
 
 const STORAGE_KEY = "theme";
 
@@ -25,8 +25,8 @@ export function ThemeToggle() {
   };
 
   return (
-    <div className="fixed right-4 top-4 z-50 flex items-center gap-2 rounded-full border border-border bg-background/90 px-3 py-2 shadow-sm">
-      <Text as="span" variant="muted">
+    <div className="fixed right-sm top-sm z-50 flex items-center gap-xs rounded-full border border-border bg-background/90 px-sm py-xs shadow-sm">
+      <Text as="span" className="text-muted-foreground" variant="caption">
         Dark mode
       </Text>
       <Switch

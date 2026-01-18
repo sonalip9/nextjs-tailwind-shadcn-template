@@ -2,7 +2,7 @@ import * as React from "react";
 
 import { cn } from "@/lib/utils";
 
-type BoxProps<T extends React.ElementType = "div"> = {
+export type BoxProps<T extends React.ElementType = "div"> = {
   as?: T;
   className?: string;
 } & React.ComponentPropsWithoutRef<T>;

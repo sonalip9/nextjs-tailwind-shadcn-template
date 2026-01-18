@@ -3,11 +3,56 @@
 
 @custom-variant dark (&:is(.dark *));
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
+@theme static {
+  /* ==== Typography ==== */
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
+
+  --font-header: var(--font-geist-sans);
+  --font-body: var(--font-geist-sans);
+
+  /* Heading 1 */
+  --text-h1: var(--text-4xl); /* 2.25rem (36px) */
+  --text-h1--font-weight: var(--font-weight-bold); /* 700 */
+
+  /* Heading 2 */
+  --text-h2: var(--text-3xl); /* 1.875rem (30px) */
+  --text-h2--font-weight: var(--font-weight-semibold); /* 600 */
+
+  /* Heading 3 */
+  --text-h3: var(--text-2xl); /* 1.5rem (24px) */
+  --text-h3--font-weight: var(--font-weight-semibold); /* 600 */
+
+  /* Heading 4 */
+  --text-h4: var(--text-xl); /* 1.25rem (20px) */
+  --text-h4--font-weight: var(--font-weight-semibold); /* 600 */
+
+  /* Body */
+  --text-body: var(--text-base); /* 1rem (16px) */
+  --text-body--font-weight: var(--font-weight-normal); /* 400 */
+
+  /* Caption */
+  --text-caption: var(--text-sm); /* 0.875rem (14px) */
+  --text-caption--font-weight: var(--font-weight-normal); /* 400 */
+
+  /* Footer */
+  --text-footer: var(--text-xs); /* 0.75rem (12px) */
+  --text-footer--font-weight: var(--font-weight-normal); /* 400 */
+}
+
+@theme inline {
+  /* Spacing */
+  --spacing-xs: calc(var(--spacing) * 2); /* 0.5rem or p-2 */
+  --spacing-sm: calc(var(--spacing) * 4); /* 1rem or p-4 */
+  --spacing-md: calc(var(--spacing) * 6); /* 1.5rem or p-6 */
+  --spacing-lg: calc(var(--spacing) * 8); /* 2rem or p-8 */
+  --spacing-xl: calc(var(--spacing) * 10); /* 2.5rem or p-10 */
+  --spacing-2xl: calc(var(--spacing) * 12); /* 3rem or p-12 */
+  --spacing-3xl: calc(var(--spacing) * 16); /* 4rem or p-16 */
+
+  /* Colors */
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
   --color-sidebar-ring: var(--sidebar-ring);
   --color-sidebar-border: var(--sidebar-border);
   --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
@@ -37,17 +82,20 @@
   --color-popover: var(--popover);
   --color-card-foreground: var(--card-foreground);
   --color-card: var(--card);
-  --radius-sm: calc(var(--radius) - 4px);
-  --radius-md: calc(var(--radius) - 2px);
-  --radius-lg: var(--radius);
-  --radius-xl: calc(var(--radius) + 4px);
-  --radius-2xl: calc(var(--radius) + 8px);
-  --radius-3xl: calc(var(--radius) + 12px);
-  --radius-4xl: calc(var(--radius) + 16px);
+
+  /* Border Radius */
+  --radius-sm: calc(var(--radius) - 4px); /* 0.375rem */
+  --radius-md: calc(var(--radius) - 2px); /*0.5rem */
+  --radius-lg: var(--radius); /* 0.625rem */
+  --radius-xl: calc(var(--radius) + 4px); /* 0.875rem */
+  --radius-2xl: calc(var(--radius) + 8px); /* 1.125rem */
+  --radius-3xl: calc(var(--radius) + 12px); /* 1.375rem */
+  --radius-4xl: calc(var(--radius) + 16px); /* 1.625rem */
 }
 
 :root {
-  --radius: 0.625rem;
+  --radius: 0.625rem; /* 10px */
+
   --background: oklch(1 0 0);
   --foreground: oklch(0.145 0 0);
   --card: oklch(1 0 0);
@@ -120,6 +168,24 @@
     @apply border-border outline-ring/50;
   }
   body {
-    @apply bg-background text-foreground;
+    @apply bg-background text-foreground font-body text-body;
+  }
+  h1 {
+    @apply font-header text-h1;
+  }
+  h2 {
+    @apply font-header text-h2;
+  }
+  h3 {
+    @apply font-header text-h3;
+  }
+  h4 {
+    @apply font-header text-h4;
+  }
+  h5 {
+    @apply font-header;
+  }
+  h6 {
+    @apply font-header;
   }
 }
