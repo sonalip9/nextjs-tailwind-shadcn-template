@@ -1,4 +1,4 @@
-export default {
+const config = {
   extends: ["@commitlint/config-conventional"],
   rules: {
     "type-enum": [
@@ -9,3 +9,5 @@ export default {
     "subject-case": [2, "always", "lower-case"],
   },
 };
+
+export default config;
