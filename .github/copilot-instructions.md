@@ -5,7 +5,7 @@ You are assisting in a **production-grade Next.js template** using:
 - Next.js (App Router)
 - TypeScript
 - Tailwind CSS
-- shadcn/ui (Radix-based components)
+- shadcn/ui (BaseUI-based components)
 
 This is a **template repository**, not a product. All tooling and conventions must be:
 
